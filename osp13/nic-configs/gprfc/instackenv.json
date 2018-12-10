@@ -1,0 +1,30 @@
+{
+    "nodes": [
+        {
+            "arch": "x86_64", 
+            "cpu": "2", 
+            "disk": "20", 
+            "mac": [
+                "d4:be:d9:f4:c5:7f"
+            ], 
+            "memory": "1024", 
+            "pm_addr": "gprfc043-drac.sbu.lab.eng.bos.redhat.com",
+            "pm_password": "481309",
+            "pm_type": "pxe_ipmitool", 
+            "pm_user": "op"
+        }, 
+        {
+            "arch": "x86_64", 
+            "cpu": "2", 
+            "disk": "20", 
+            "mac": [
+                "d4:be:d9:f4:c4:68"
+            ], 
+            "memory": "1024", 
+            "pm_addr": "gprfc041-drac.sbu.lab.eng.bos.redhat.com",
+            "pm_password": "481309",
+            "pm_type": "pxe_ipmitool", 
+            "pm_user": "op"
+        }
+    ]
+}
