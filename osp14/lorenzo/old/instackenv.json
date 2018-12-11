@@ -1,0 +1,69 @@
+{
+    "nodes": [
+        {
+            "arch": "x86_64",
+            "cpu": "2",
+            "disk": "20",
+            "mac": [
+                "ec:f4:bb:c1:c6:8a"
+            ],
+            "memory": "1024",
+            "pm_addr": "rossi-ilo.mgmt.lab.eng.rdu.redhat.com",
+            "pm_password": "100yard-",
+            "pm_type": "pxe_ipmitool",
+            "pm_user": "admin"
+        },
+        {
+            "arch": "x86_64",
+            "cpu": "2",
+            "disk": "20",
+            "mac": [
+                "ec:f4:bb:c1:c7:aa"
+            ],
+            "memory": "1024",
+            "pm_addr": "kato-ilo.mgmt.lab.eng.rdu.redhat.com",
+            "pm_password": "100yard-",
+            "pm_type": "pxe_ipmitool",
+            "pm_user": "admin"
+        },
+        {
+            "arch": "x86_64",
+            "cpu": "2",
+            "disk": "20",
+            "mac": [
+                "ec:f4:bb:c1:ce:8a"
+            ],
+            "memory": "1024",
+            "pm_addr": "marquez-ilo.mgmt.lab.eng.rdu.redhat.com",
+            "pm_password": "100yard-",
+            "pm_type": "pxe_ipmitool",
+            "pm_user": "admin"
+        },
+        {
+            "arch": "x86_64",
+            "cpu": "2",
+            "disk": "20",
+            "mac": [
+                "bc:30:5b:f7:3f:9a"
+            ],
+            "memory": "1024",
+            "pm_addr": "petrali-ilo.mgmt.lab.eng.rdu.redhat.com",
+            "pm_password": "100yard-",
+            "pm_type": "pxe_ipmitool",
+            "pm_user": "admin"
+        },
+        {
+            "arch": "x86_64",
+            "cpu": "2",
+            "disk": "20",
+            "mac": [
+                "b8:ca:3a:5f:ae:da"
+            ],
+            "memory": "1024",
+            "pm_addr": "hayden-ilo.mgmt.lab.eng.rdu.redhat.com",
+            "pm_password": "100yard-",
+            "pm_type": "pxe_ipmitool",
+            "pm_user": "admin"
+        }
+    ]
+}

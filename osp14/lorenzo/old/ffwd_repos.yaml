@@ -1,0 +1,23 @@
+parameter_defaults:
+  FastForwardRepoType: custom-script
+  FastForwardCustomRepoScriptContent: |
+    set -e
+    yum localinstall -y http://download.lab.bos.redhat.com/rcm-guest/puddles/OpenStack/rhos-release/rhos-release-latest.noarch.rpm
+    rhos-release -x
+    case $1 in
+      ocata)
+        rhos-release 11 -P
+        ;;
+      pike)
+        rhos-release 12 -P
+        ;;
+      queens)
+        rhos-release 13 -P
+        rm -rf /etc/yum.repos.d/rhos-release-ceph*
+        ;;
+      *)
+        echo "unknown release $1" >&2
+        exit 1
+    esac
+    yum clean all
+
