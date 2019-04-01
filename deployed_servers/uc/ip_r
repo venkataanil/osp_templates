@@ -1,0 +1,8 @@
+[stack@undercloud-0 ~]$ ip r
+default via 172.16.0.1 dev eth1 
+10.0.0.0/24 dev eth2 proto kernel scope link src 10.0.0.2 
+169.254.0.0/16 dev eth0 scope link metric 1002 
+169.254.0.0/16 dev br-ctlplane scope link metric 1006 
+172.16.0.0/24 dev eth1 proto kernel scope link src 172.16.0.32 
+192.168.24.0/24 dev br-ctlplane proto kernel scope link src 192.168.24.1 
+

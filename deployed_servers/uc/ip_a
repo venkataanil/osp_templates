@@ -1,0 +1,38 @@
+[stack@undercloud-0 ~]$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast master ovs-system state UP group default qlen 1000
+    link/ether 52:54:00:42:cc:b3 brd ff:ff:ff:ff:ff:ff
+    inet6 fe80::5054:ff:fe42:ccb3/64 scope link 
+       valid_lft forever preferred_lft forever
+3: eth1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 52:54:00:50:76:3c brd ff:ff:ff:ff:ff:ff
+    inet 172.16.0.32/24 brd 172.16.0.255 scope global eth1
+       valid_lft forever preferred_lft forever
+    inet6 fe80::5054:ff:fe50:763c/64 scope link 
+       valid_lft forever preferred_lft forever
+4: eth2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 52:54:00:b2:16:63 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.0.2/24 brd 10.0.0.255 scope global eth2
+       valid_lft forever preferred_lft forever
+    inet6 fe80::5054:ff:feb2:1663/64 scope link 
+       valid_lft forever preferred_lft forever
+5: ovs-system: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether 12:56:af:c2:d4:e8 brd ff:ff:ff:ff:ff:ff
+6: br-ctlplane: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/ether 52:54:00:42:cc:b3 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.24.1/24 brd 192.168.24.255 scope global br-ctlplane
+       valid_lft forever preferred_lft forever
+    inet 192.168.24.3/32 scope global br-ctlplane
+       valid_lft forever preferred_lft forever
+    inet 192.168.24.2/32 scope global br-ctlplane
+       valid_lft forever preferred_lft forever
+    inet6 fe80::5054:ff:fe42:ccb3/64 scope link 
+       valid_lft forever preferred_lft forever
+7: br-int: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether 4e:91:30:47:8c:48 brd ff:ff:ff:ff:ff:ff
+

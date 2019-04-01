@@ -1,0 +1,4 @@
+---
+parameter_defaults:
+    CinderLVMLoopDeviceSize: 16384
+
