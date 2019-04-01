@@ -1,0 +1,144 @@
+parameter_defaults:
+  CertmongerCA: local
+  CloudName: 192.168.24.2
+  ContainerCli: podman
+  ContainerImagePrepare:
+  - set:
+      ceph_image: daemon
+      ceph_namespace: docker.io/ceph
+      ceph_tag: v3.2.1-stable-3.2-luminous-centos-7-x86_64
+      name_prefix: centos-binary-
+      name_suffix: ''
+      namespace: docker.io/tripleomaster
+      neutron_driver: ovn
+      openshift_asb_namespace: docker.io/ansibleplaybookbundle
+      openshift_asb_tag: latest
+      openshift_cluster_monitoring_image: cluster-monitoring-operator
+      openshift_cluster_monitoring_namespace: quay.io/coreos
+      openshift_cluster_monitoring_tag: v0.1.1
+      openshift_cockpit_image: kubernetes
+      openshift_cockpit_namespace: docker.io/cockpit
+      openshift_cockpit_tag: latest
+      openshift_configmap_reload_image: configmap-reload
+      openshift_configmap_reload_namespace: quay.io/coreos
+      openshift_configmap_reload_tag: v0.0.1
+      openshift_etcd_image: etcd
+      openshift_etcd_namespace: registry.fedoraproject.org/latest
+      openshift_etcd_tag: latest
+      openshift_gluster_block_image: glusterblock-provisioner
+      openshift_gluster_image: gluster-centos
+      openshift_gluster_namespace: docker.io/gluster
+      openshift_gluster_tag: latest
+      openshift_grafana_namespace: docker.io/grafana
+      openshift_grafana_tag: 5.2.1
+      openshift_heketi_image: heketi
+      openshift_heketi_namespace: docker.io/heketi
+      openshift_heketi_tag: latest
+      openshift_kube_rbac_proxy_image: kube-rbac-proxy
+      openshift_kube_rbac_proxy_namespace: quay.io/coreos
+      openshift_kube_rbac_proxy_tag: v0.3.1
+      openshift_kube_state_metrics_image: kube-state-metrics
+      openshift_kube_state_metrics_namespace: quay.io/coreos
+      openshift_kube_state_metrics_tag: v1.3.1
+      openshift_namespace: docker.io/openshift
+      openshift_oauth_proxy_tag: v1.1.0
+      openshift_prefix: origin
+      openshift_prometheus_alertmanager_tag: v0.15.2
+      openshift_prometheus_config_reload_image: prometheus-config-reloader
+      openshift_prometheus_config_reload_namespace: quay.io/coreos
+      openshift_prometheus_config_reload_tag: v0.23.2
+      openshift_prometheus_node_exporter_tag: v0.16.0
+      openshift_prometheus_operator_image: prometheus-operator
+      openshift_prometheus_operator_namespace: quay.io/coreos
+      openshift_prometheus_operator_tag: v0.23.2
+      openshift_prometheus_tag: v2.3.2
+      openshift_tag: v3.11.0
+      tag: current-tripleo
+    tag_from_label: rdo_version
+  ContainerImagePrepareDebug: true
+  ControlPlaneStaticRoutes: []
+  Debug: true
+  DeploymentUser: stack
+  DnsServers: ''
+  DockerInsecureRegistryAddress:
+  - 192.168.24.1:8787
+  - 192.168.24.3:8787
+  DockerNetworkOptions: --bip=172.31.0.1/24
+  EnableValidations: true
+  IronicAutomatedClean: false
+  IronicEnabledBiosInterfaces:
+  - ilo
+  - no-bios
+  - redfish
+  IronicEnabledBootInterfaces:
+  - ilo-pxe
+  - ipxe
+  - pxe
+  IronicEnabledHardwareTypes:
+  - idrac
+  - ilo
+  - ipmi
+  - redfish
+  IronicEnabledInspectInterfaces:
+  - idrac
+  - ilo
+  - inspector
+  - no-inspect
+  - redfish
+  IronicEnabledManagementInterfaces:
+  - fake
+  - idrac
+  - ilo
+  - ipmitool
+  - noop
+  - redfish
+  IronicEnabledPowerInterfaces:
+  - fake
+  - idrac
+  - ilo
+  - ipmitool
+  - redfish
+  IronicEnabledRaidInterfaces:
+  - idrac
+  - no-raid
+  IronicEnabledVendorInterfaces:
+  - idrac
+  - ipmitool
+  - no-vendor
+  IronicIPXEEnabled: true
+  IronicInspectorCollectors: default,extra-hardware,numa-topology,logs
+  IronicInspectorIPXEEnabled: true
+  IronicInspectorInterface: br-ctlplane
+  IronicInspectorKernelArgs: ipa-debug=1 ipa-inspection-dhcp-all-interfaces=1 ipa-collect-lldp=1
+  IronicInspectorSubnets:
+  - gateway: 192.168.24.1
+    host_routes: []
+    ip_range: 192.168.24.100,192.168.24.120
+    netmask: 255.255.255.0
+    tag: ctlplane-subnet
+  LocalContainerRegistry: 192.168.24.1
+  MasqueradeNetworks:
+    192.168.24.0/24:
+    - 192.168.24.0/24
+  NeutronDnsDomain: localdomain
+  NeutronPublicInterface: eth0
+  NovaSchedulerMaxAttempts: 30
+  NtpServer:
+  - clock.redhat.com
+  PythonInterpreter: /usr/bin/python2
+  SELinuxMode: enforcing
+  TimeZone: UTC
+  UndercloudConfigFilePath: /home/stack/undercloud.conf
+  UndercloudCtlplaneLocalSubnet: ctlplane-subnet
+  UndercloudCtlplaneSubnets:
+    ctlplane-subnet:
+      AllocationPools:
+      - end: 192.168.24.24
+        start: 192.168.24.5
+      HostRoutes: []
+      NetworkCidr: 192.168.24.0/24
+      NetworkGateway: 192.168.24.1
+  UndercloudEnableRoutedNetworks: false
+  UndercloudHomeDir: /home/stack
+  UndercloudLocalMtu: 1500
+  UpgradeRemoveUnusedPackages: false
